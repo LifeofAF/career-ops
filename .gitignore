@@ -45,3 +45,5 @@ bun.lock
 .claude/memory/
 career-dashboard
 package-lock.json
+.claude/settings.json
+*.bak

@@ -9,6 +9,36 @@ Classify the job into one of the 6 archetypes (see `_shared.md`). If it is a hyb
 - How to rewrite the summary in block E
 - Which STAR stories to prepare in block F
 
+## Step 0.5 — Clearance Gate (HARD RULE)
+
+Before continuing with the A-G evaluation, extract the clearance requirement from the JD and compare it against the candidate's profile declared in `config/profile.yml` under the `clearance:` block.
+
+**Accept and continue evaluation if the JD requires:**
+- TS/SCI, Top Secret, Secret, Public Trust, or no clearance
+- "Active clearance" without specifying level (assume acceptable, flag for verification)
+
+**Reject as hard blocker if the JD requires:**
+- CI Polygraph, Full Scope Polygraph, or Lifestyle Polygraph
+- SCI compartments beyond what the candidate holds
+- Any clearance level not listed in `clearance.acceptable_levels`
+
+**If hard blocker:**
+1. Generate ONLY Block A (role summary) + Block G (legitimacy)
+2. Cap overall score at 2.0/5
+3. Tracker status: `Discarded — clearance mismatch`
+4. Skip PDF generation and Blocks B-F
+5. Exception: if the JD explicitly mentions "will sponsor poly upgrade" or "clearance upgrade available," continue with full evaluation and note the sponsorship in Block C
+
+**If the JD does not mention clearance:**
+- Assume civilian/commercial role, continue with full evaluation
+- Note in Block A: "Clearance: not required"
+
+**Gate output (mandatory table):**
+
+| Clearance required (JD) | Candidate posture | Decision | Sponsorship offered |
+|-------------------------|-------------------|----------|---------------------|
+| ... | TS/SCI active, no poly | Continue / Hard block | Yes / No / N/A |
+
 ## Block A — Role Summary
 
 Table with:
@@ -163,6 +193,7 @@ Save full evaluation in `reports/{###}-{company-slug}-{YYYY-MM-DD}.md`.
 **URL:**
 **Archetype:** {detected}
 **Score:** {X/5}
+**Clearance Fit:** {Match | Mismatch — hard block | Sponsorship offered | Not required}
 **Legitimacy:** {High Confidence | Proceed with Caution | Suspicious}
 **PDF:** {path or pending}
 
@@ -206,12 +237,11 @@ Save full evaluation in `reports/{###}-{company-slug}-{YYYY-MM-DD}.md`.
 - Company
 - Role
 - Score: match average (1-5)
-- Status: `Evaluated`
+- Clearance: Match / Mismatch / Sponsorship / N/A
+- Status: `Evaluated` (or `Discarded — clearance mismatch` if Step 0.5 hard-blocked)
 - PDF: ❌ (or ✅ if auto-pipeline generated PDF)
 - Report: link relative to the report .md (e.g., `[001](reports/001-company-2026-01-01.md)`)
 
 **Tracker format:**
 
-```markdown
-| # | Date | Company | Role | Score | Status | PDF | Report |
-```
+| # | Date | Company | Role | Score | Clearance | Status | PDF | Report |

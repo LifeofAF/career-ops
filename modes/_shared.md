@@ -21,8 +21,8 @@
 **RULE: NEVER hardcode metrics from proof points.** Read them from cv.md + article-digest.md at evaluation time.
 **RULE: For article/project metrics, article-digest.md takes precedence over cv.md.**
 **RULE: Read _profile.md AFTER this file. User customizations in _profile.md override defaults here.**
-
 ---
+
 
 ## Scoring System
 
@@ -85,6 +85,19 @@ Classify every offer into one of these types (or hybrid of 2):
 | AI Transformation | "change management", "adoption", "enablement", "transformation" |
 
 After detecting archetype, read `modes/_profile.md` for the user's specific framing and proof points for that archetype.
+
+## Clearance Filter (HARD RULE)
+
+The candidate holds an active Top Secret clearance.
+
+**Accept:** roles requiring TS, Top Secret, Secret, Public Trust, or no clearance.
+
+**Reject during scan:** roles explicitly requiring CI Poly, FS Poly, or Lifestyle Poly.
+
+**During evaluation:** if a role requires a clearance the candidate does not hold,
+score the "clearance fit" dimension as F and cap the overall score at 2.5/5
+unless the JD explicitly states the employer will sponsor the upgrade.
+
 
 ## Global Rules
 
