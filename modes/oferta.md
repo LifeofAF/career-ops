@@ -4,7 +4,7 @@ When the candidate pastes a job (text or URL), ALWAYS deliver the 7 blocks (A-F 
 
 ## Step 0 — Archetype Detection
 
-Classify the job into one of the 6 archetypes (see `_shared.md`). If it is a hybrid, indicate the 2 closest ones. This determines:
+Classify the job into one of the 8 archetypes across two tracks — Senior Cloud Architect and Director of IT (see `_shared.md` for the detection table; `config/profile.yml` under `archetypes` for full proof-point and STAR detail). If it is a hybrid, indicate the 2 closest ones. This determines:
 - Which proof points to prioritize in block B
 - How to rewrite the summary in block E
 - Which STAR stories to prepare in block F
@@ -54,13 +54,15 @@ Table with:
 
 Read `cv.md`. Create a table with each JD requirement mapped to exact lines in the CV.
 
-**Adapted to the archetype:**
-- If FDE → prioritize delivery speed and client-facing proof points
-- If SA → prioritize system design and integrations
-- If PM → prioritize product discovery and metrics
-- If LLMOps → prioritize evals, observability, pipelines
-- If Agentic → prioritize multi-agent, HITL, orchestration
-- If Transformation → prioritize change management, adoption, scaling
+**Adapted to the archetype (see `config/profile.yml → archetypes` for full proof-point priority lists):**
+- If Federal Cloud Migration Architect → prioritize landing zone design, ATO accreditation, IaC metrics
+- If Multi-Cloud Platform Architect → prioritize AWS GovCloud + Azure dual-cloud depth, reference architecture authoring, cost/vendor trade-off stories
+- If Container Platform / Kubernetes Architect → prioritize Big Bang / EKS IL-5 work, operational debug stories, supply chain security
+- If Zero Trust Architect → prioritize ZTRA pillar mapping, C2C compliance metrics, ICAM implementation
+- If Federal Civilian Agency IT Director → prioritize budget ownership, staffing scale, fiscal transformation narrative
+- If Mid-Market / Defense Contractor IT Director → prioritize CMMC readiness, M365 modernization, service desk / infrastructure scope
+- If Program-Aligned IT / Delivery Director → prioritize program math (contract value, milestone delivery, CPARs), team scale
+- If Cybersecurity-Adjacent IT Director → prioritize ATO portfolio breadth, NIST RMF program management, IT/cyber bridge narrative
 
 **Gaps** section with mitigation strategy for each. For each gap:
 1. Is it a hard blocker or a nice-to-have?
@@ -103,13 +105,15 @@ The **Reflection** column captures what was learned or what would be done differ
 
 **Story Bank:** If `interview-prep/story-bank.md` exists, check if any of these stories are already there. If not, append new ones. Over time this builds a reusable bank of 5-10 master stories that can be adapted to any interview question.
 
-**Selected and framed according to the archetype:**
-- FDE → emphasize delivery speed and client-facing
-- SA → emphasize architectural decisions
-- PM → emphasize discovery and trade-offs
-- LLMOps → emphasize metrics, evals, production hardening
-- Agentic → emphasize orchestration, error handling, HITL
-- Transformation → emphasize adoption, organizational change
+**Selected and framed according to the archetype (STAR framing detail in `config/profile.yml → archetypes`):**
+- Federal Cloud Migration Architect → boundary definition and control inheritance decisions; "we considered X, chose Y because of authorization boundary impact"
+- Multi-Cloud Platform Architect → abstraction trade-offs; when to push cloud-agnostic vs. accept cloud-native lock-in for velocity
+- Container Platform / Kubernetes Architect → operational stories; production debug and iterate cycles, not whiteboard design
+- Zero Trust Architect → maturity progression mapped to ZTRA pillars; specific pillar-by-pillar measurement stories
+- Federal Civilian Agency IT Director → budget and people stories; fiscal transformation narratives
+- Mid-Market / Defense Contractor IT Director → stability + transformation; CMMC readiness, M365 migration milestones
+- Program-Aligned IT / Delivery Director → program math; contract value, milestone delivery, CPARs / award fee scores
+- Cybersecurity-Adjacent IT Director → ATO portfolio breadth and IT/cyber bridge; CISO-track positioning
 
 Also include:
 - 1 recommended case study (which of their projects to present and how)
