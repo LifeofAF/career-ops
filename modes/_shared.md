@@ -21,8 +21,8 @@
 **RULE: NEVER hardcode metrics from proof points.** Read them from cv.md + article-digest.md at evaluation time.
 **RULE: For article/project metrics, article-digest.md takes precedence over cv.md.**
 **RULE: Read _profile.md AFTER this file. User customizations in _profile.md override defaults here.**
----
 
+---
 
 ## Scoring System
 
@@ -73,43 +73,18 @@ Block G assesses whether a posting is likely a real, active opening. It does NOT
 
 ## Archetype Detection
 
-Classify every offer into one of these types (or hybrid of 2). Full detail —
-domain signals, proof-point priorities, comp bands, and STAR framing — is in
-`config/profile.yml` under `archetypes`.
-
-**Senior Cloud Architect track:**
+Classify every offer into one of these types (or hybrid of 2):
 
 | Archetype | Key signals in JD |
 |-----------|-------------------|
-| Federal Cloud Migration Architect | "cloud migration", "FedRAMP Authorization", "ATO", "data center exit", "landing zone", "TIC 3.0", "Direct Connect", "ExpressRoute", "control inheritance" |
-| Multi-Cloud Platform Architect | "multi-cloud", "cloud-agnostic", "hybrid cloud", "GitOps", "policy-as-code", "FinOps", "Crossplane", "platform engineering" |
-| Container Platform / Kubernetes Architect | "Kubernetes architect", "EKS", "AKS", "OpenShift", "Big Bang", "Istio", "service mesh", "Helm", "Argo CD", "OPA Gatekeeper" |
-| Zero Trust Architect (DoD ZTRA) | "Zero Trust", "ZTRA", "Thunderdome", "ICAM", "microsegmentation", "PIV/CAC", "Comply-to-Connect", "C2C", "SASE" |
+| AI Platform / LLMOps | "observability", "evals", "pipelines", "monitoring", "reliability" |
+| Agentic / Automation | "agent", "HITL", "orchestration", "workflow", "multi-agent" |
+| Technical AI PM | "PRD", "roadmap", "discovery", "stakeholder", "product manager" |
+| AI Solutions Architect | "architecture", "enterprise", "integration", "design", "systems" |
+| AI Forward Deployed | "client-facing", "deploy", "prototype", "fast delivery", "field" |
+| AI Transformation | "change management", "adoption", "enablement", "transformation" |
 
-**Director of IT track:**
-
-| Archetype | Key signals in JD |
-|-----------|-------------------|
-| Federal Civilian Agency IT Director | "OCIO", "FITARA", "CPIC", "TBM", "FedRAMP authorization sponsorship", "ATO portfolio management", "agency CIO support" |
-| Mid-Market / Defense Contractor IT Director | "internal IT", "corporate IT", "M365", "CMMC Level 2/3", "NIST 800-171", "CUI environment", "SCRM" |
-| Program-Aligned IT / Delivery Director | "program director", "delivery director", "P&L responsibility", "earned value", "EVM", "milestone delivery" |
-| Cybersecurity-Adjacent IT Director (CISO-Track) | "Director of IT and Security", "CISO designee", "FISMA", "NIST RMF", "ATO portfolio owner", "ISSO" |
-
-After detecting archetype, read `modes/_profile.md` for narrative framing and
-`config/profile.yml` under `archetypes` for proof-point priorities and STAR guidance.
-
-## Clearance Filter (HARD RULE)
-
-The candidate holds an active Top Secret clearance.
-
-**Accept:** roles requiring TS, Top Secret, Secret, Public Trust, or no clearance.
-
-**Reject during scan:** roles explicitly requiring CI Poly, FS Poly, or Lifestyle Poly.
-
-**During evaluation:** if a role requires a clearance the candidate does not hold,
-score the "clearance fit" dimension as F and cap the overall score at 2.5/5
-unless the JD explicitly states the employer will sponsor the upgrade.
-
+After detecting archetype, read `modes/_profile.md` for the user's specific framing and proof points for that archetype.
 
 ## Global Rules
 
